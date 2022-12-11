@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clases para el desarrollo de la voz, de la educación del oído y del criterio musical">
+    <title>ARTESONADO</title>
+    <!-- Iconos Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Estilos de BootStrap -->
+    <link rel="stylesheet" href="source/css/bootstrap-min.css">
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container1">
+        <header>
+            <div class="nav-bar">
+                <i class="fas fa-bars" id="cruz"></i>
+                <a class="navbar-logo" href="index.html"><img src="img/cortoARTESONADO.svg" alt="logo1"></a>
+            </div>
+            <nav class="main-nav">
+                <ul class="menu" id="menu">
+                    <li class="menu-item">
+                        <a class="navbar-logo" href="index.html"><img src="img/largoARTESONADO.svg" alt="logo2"></a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="sobremi.html" class="menu-link">SOBRE MÍ</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="clases.html" class="menu-link">CLASES</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="videos.html" class="menu-link">VIDEOS</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="blog.html" class="menu-link">BLOG</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="contacto.html" class="menu-link active">CONTACTO</a>
+                    </li>
+                    <li class="menu-iconos">
+                        <a href="#" class="menu-link"><img src="img/gbritain.svg" alt="logo3"></a>
+                        <a href="#" class="menu-link"><img src="img/spain.svg" alt="logo4"></a>
+                    </li>
+                    <li class="menu-iconos">
+                        <a href="#" class="menu-link"><i class="fas fa-universal-access fa-2x"></i></a>
+                        <a href="#" class="menu-link"><i class="fas fa-search fa-2x"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- contenido principal -->
+        <main>
+            <!-- Formulario y mapa -->
+            <h1>Contacto</h1>
+            <section class="contactoyhome">
+                <!-- formulario y mapa en dos lados -->
+                <div class="d-flex justify-content-center">
+                    <form action="#" method="post" id="formulario1" name="formulario1">
+                        <ul>
+                            <li>
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre y apellidos">
+                                <span id="nombreError" class="noError"></span>
+                            </li>
+                            <li>
+                                <input type="email" name="correo" id="correo" placeholder="E-mail">
+                                <span id="correoError" class="noError"></span>
+                            </li>
+                            <li>
+                                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono">
+                                <span id="telefonoError" class="noError"></span>
+                            </li>
+                            <li>
+                                <textarea id="comentario" rows="10" cols="30">¡Hola! Estoy interesado en sus clases y me gustaría recibir más información</textarea>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="condiciones" id="condiciones" value="acepta">
+                                <label for="condiciones">He leído y acepto la política de privacidad.</label>
+                                <span id="politicaError" class="noError"></span>
+                            </li>
+                            <li class="d-flex justify-content-center">
+                                <input type="button" value="Enviar" id="botonEnvia">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <div class="columna p-2">
+                    <!-- ICONOS SOCIALES Y MAPA -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.096118709516!2d-3.606190284359602!3d37.17418665425694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fc95cbdef34f%3A0x7ca761d51a85a007!2sC.%20Carlos%20Pareja%2C%205%2C%2018002%20Granada!5e0!3m2!1ses!2ses!4v1637022308322!5m2!1ses!2ses"></iframe>
+                    <address> Carlos Pareja 5, 18002 Granada<br>675749376<br>artesonado@gmail.com</address>
+
+                </div>
+            </section>
+            <section>
+                <h4>Búscame en RRSS</h4>
+                <ul class="colorcontacto">
+                    <li><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter fa-2x"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-2x"></i></a></li>
+                </ul>
+            </section>
+        </main>
+        <!-- Pie del documento para pantalla pequeña-->
+        <footer>
+            <div class="d-flex justify-content-around">
+                <div>
+                    <ul class="privacidad">
+                        <li>
+                            <a href="faq.html">FAQs</a>
+                        </li>
+                        <li>
+                            <a href="../artesonadofinal/cookies/cookies.html">Cookies</a>
+                        </li>
+                        <li>
+                            <a href="avisolegal.html">Aviso legal</a>
+                        </li>
+                        <li>
+                            <a href="privacidad.html">Política de privacidad</a>
+                        </li>
+                    </ul>
+                    <div class="suscribirsegrande">
+                        <form>
+                            <div class="d-flex">
+                                <input id="newsletter1" type="text" placeholder="Email address">
+                                <button class="btn btn-primary " type="button">Suscribirse</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <ul class="menu-iconos">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                    <p>©2021 ARTESONADO</p>
+                </div>
+            </div>
+            <div class="suscribirse">
+                <form>
+                    <div class="d-flex">
+                        <input id="newsletter2" type="text" placeholder="Email address">
+                        <button class="btn btn-primary" type="button">Suscribirse</button>
+                    </div>
+                </form>
+            </div>
+        </footer>
+    </div>
+    <!-- Scripts  -->
+    <script src="source/js/bootstrap.bundle.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/menuburger.js"></script>
+</body>
+
+</html>

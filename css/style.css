@@ -1,0 +1,896 @@
+@charset "utf-8";
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ :root {
+    --color-primario: #ddb7aa;
+    --color-secundario: #4da491;
+    --color-terciario: #333d7a;
+    --color-cuaternario: #60566e;
+    --color-standard: #000000;
+    --color-neutro: #ffffff;
+    --color-fondo: #fff4f4;
+    --color-opcional: #7f7b7b;
+    --fuente-tamano: 16px;
+    --fuente-familia: 'Helvetica', monospace;
+}
+
+html,
+body,
+.container1 {
+    min-height: 100vh;
+    font-family: var(--fuente-familia);
+    font-size: var(--fuente-tamano);
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1024px;
+}
+
+
+/*LAYOUT PARA EL SITIO WEB*/
+
+.container1 {
+    width: 100vw;
+    display: grid;
+    max-width: 1920px;
+    grid-template-columns: 100vw;
+    grid-template-rows: 13vh 1fr 15.5vh;
+    grid-template-areas: "cabecera" "principal" "pie";
+}
+
+main {
+    grid-area: principal;
+    margin: 0 1em 2em 1em;
+}
+
+header {
+    grid-area: cabecera;
+    background: var(--color-primario);
+}
+
+footer {
+    grid-area: pie;
+    background: var(--color-standard);
+    color: var(--color-neutro);
+    font-size: 0.7em;
+    padding: 0.4em;
+}
+
+h1 {
+    font-size: 2.3em;
+    text-align: center;
+    margin-top: 2.3em;
+    margin-bottom: 0.9em;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--color-secundario);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+h4,
+legend {
+    margin-top: 0.9em;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-cuaternario);
+}
+
+p {
+    line-height: 1.2;
+    padding: 0.7em;
+    text-align: justify;
+}
+
+section {
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+textarea {
+    font-family: var(--fuente-familia);
+    font-size: 1em;
+    padding: 5px;
+}
+
+
+/* CITAS DE TESTIMONIOS*/
+
+blockquote {
+    font-size: 1em;
+    line-height: 1;
+    margin-bottom: 2.2em;
+    text-align: center;
+}
+
+cite {
+    font-weight: bold;
+    color: var(--color-secundario);
+    font-size: 1.5em;
+}
+
+
+/*espacio del interior del formulario*/
+
+form li {
+    padding: 0.3em;
+    list-style: none;
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+/*agrupar y alinear en columnas*/
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna div {
+    text-align: center;
+    padding: 0.9em;
+}
+
+
+/*la primera letra de colores en span para objetivos*/
+
+.primario {
+    color: var(--color-primario);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.secundario {
+    color: var(--color-secundario);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.terciario {
+    color: var(--color-terciario);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.cuaternario {
+    color: var(--color-cuaternario);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+/*Notas musicales home*/
+
+.ordendetres img {
+    width: 50%;
+}
+
+
+/*Imágenes redondeadas de testimonios y ocultar slider en pantalla pequeña */
+
+.no-slider img {
+    clip-path: circle(25%);
+    width: 100vw;
+}
+
+.slider {
+    display: none;
+}
+
+
+/*cambio de puntero solamente para icono*/
+
+.nav-bar i {
+    cursor: pointer;
+}
+
+.menu {
+    background: var(--color-secundario);
+    width: 100%;
+    margin-left: -100%;
+    list-style: none;
+    position: absolute;
+    z-index: 1000;
+    padding: 1em;
+    border: 1px solid #60566e;
+}
+
+.ordendetres {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-flow: row wrap;
+    padding: 1.2em;
+}
+
+.ordendetres div {
+    width: 230px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*banderas*/
+
+.menu-link img {
+    width: 2em;
+}
+
+
+/*cuadro de objetivos página principal*/
+
+.objetivos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90vw;
+    border: solid 2px var(--color-opcional);
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px var(--color-opcional);
+    background-color: var(--color-neutro);
+    padding: 1em;
+}
+
+.menu-link {
+    display: block;
+    padding: 20px;
+    color: var(--color-neutro);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
+}
+
+.menu-link:hover {
+    color: var(--color-cuaternario);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.nav-bar {
+    padding: 10px;
+    height: 12.9vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--color-neutro);
+    font-size: 1.5em;
+    width: 100vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mostrar {
+    margin-left: 0;
+}
+
+.menu .navbar-logo {
+    display: none;
+}
+
+.nav-bar img {
+    width: 40%;
+}
+
+
+/*agrupar iconos del menú*/
+
+.menu-iconos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*suscripción del footer ordenada en pantalla pequeña y grande*/
+
+.suscribirse {
+    display: flex;
+    justify-content: center;
+}
+
+.suscribirsegrande {
+    display: none;
+}
+
+
+/*ICONOS SOCIALES DE LA PARTE DE CONTACTO*/
+
+.colorcontacto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.colorcontacto a {
+    color: var(--color-secundario);
+}
+
+.colorcontacto a:hover {
+    color: var(--color-cuaternario);
+}
+
+
+/*FAQ*/
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    color: var(--color-neutro);
+    background-color: var(--color-secundario);
+}
+
+.accordion {
+    width: 80vw;
+    padding: 50px 50px 50px 50px;
+}
+
+.accordion-body {
+    color: var(--color-neutro);
+    background-color: var(--color-cuaternario)
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--color-primario);
+    color: var(--color-neutro);
+}
+
+.accordion-item {
+    width: 75vw;
+    background-color: transparent;
+}
+
+
+/**GALERIA DE los VIDEOS*/
+
+video {
+    width: 90vw;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.posters {
+    display: flex;
+    width: 25%;
+}
+
+.demo {
+    opacity: 1;
+    width: 100%;
+}
+
+.demo:hover {
+    opacity: 0.6;
+}
+
+.mySlides {
+    display: none;
+}
+
+
+/*apartados activos*/
+
+.active {
+    color: var(--color-cuaternario);
+}
+
+
+/*centrar formulario pero solamente el de las clases ya que el de contacto tiene un textarea que lo desvía*/
+
+.clases form#formulario1 {
+    text-align: center;
+}
+
+
+/* Formatos para los títulos de los videos*/
+
+.videoletras {
+    bottom: 0;
+    width: 90vw;
+    color: #fff;
+    background: var(--color-opcional);
+    display: flex;
+    justify-content: center;
+}
+
+
+/*MENSAJE DE ERROR VALIDACION FORMULARIO*/
+
+.noError {
+    visibility: hidden;
+}
+
+.error {
+    visibility: visible;
+    color: #ff0000;
+    display: flex;
+}
+
+.borderror {
+    border: 2px solid var(--color-primario);
+}
+
+.noborderror {
+    border: 1px solid #000;
+}
+
+
+/*propiedades fecha blog*/
+
+time {
+    color: var(--color-fondo);
+    font-size: 0.8em;
+}
+
+
+/*BOTON HOME RESERVAS*/
+
+.boton {
+    color: #fff;
+    background-color: var(--color-standard);
+    padding: 0.6em;
+    font-size: 0.9em;
+    width: 20vw;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+
+/*IMAGEN DE FONDO SOBRE MI*/
+
+.imagendefondo {
+    background-image: url("../img/teresa2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#botonenvia {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*ESTRUCTURA GRID PARA EL BLOG con Flexbox para los artículos*/
+
+.blog {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: 300px;
+    gap: 1rem;
+}
+
+.blog article {
+    border: 2px solid #000;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.blog a {
+    color: var(--color-primario);
+}
+
+.blog a:hover {
+    color: var(--color-standard);
+}
+
+.blog p {
+    color: #fff;
+    padding: 0em;
+}
+
+.blog h3 {
+    font-size: 1.2em;
+}
+
+label {
+    font-size: 0.75em;
+}
+
+
+/*MAQUETACIÓN POLÍTICAS DE PRIVACIDAD*/
+
+.politicas a {
+    color: var(--color-secundario);
+}
+
+.politicas a:hover {
+    color: var(--color-primario);
+}
+
+.politicas h3 {
+    padding: 0.6em;
+}
+
+.politicas h4 {
+    padding: 0.7em;
+    text-align: left;
+    margin-top: 2em;
+}
+
+.politicas ul {
+    padding-left: 3em;
+    list-style: disc;
+}
+
+
+/*grid válido para la estructura e imágenes de dos piezas de CONTACTO y de la entrada del HOME*/
+
+.contactoyhome {
+    display: grid;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 3em;
+}
+
+.contactoyhome img {
+    width: 85%;
+    height: 100%;
+}
+
+
+/*estructura de la galería de videos y de la profesora*/
+
+.videogal {
+    display: grid;
+    justify-content: center;
+}
+
+.sobremi {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3em;
+}
+
+.sobremi img {
+    width: 90%;
+    height: 100%;
+}
+
+.sobremi figcaption {
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+#docupdf {
+    width: 20%;
+}
+
+
+/*ESPACIO PARA TARIFAS*/
+
+.tarifasarte {
+    padding: 40px;
+    display: grid;
+    grid-auto-rows: 130px;
+    gap: 2rem;
+}
+
+.tarifasarte div {
+    box-shadow: 0 8px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 15px;
+    background-color: #ddb7aa85;
+}
+
+.tarifasarte h4 {
+    text-decoration: underline;
+    text-decoration-thickness: 20%;
+    text-decoration-color: var(--color-secundario);
+}
+
+.tarifasarte p {
+    text-align: center;
+}
+
+.clases {
+    background-color: var(--color-neutro);
+    box-shadow: 0 8px 8px 0 rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.clases div {
+    padding: 30px;
+}
+
+.clases img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* apartado de la programación educativa de las clases*/
+
+.programacion {
+    display: grid;
+    gap: 2rem;
+    margin: 20px;
+}
+
+.programacion div {
+    box-shadow: 0 8px 8px 0 rgb(0 0 0 / 20%);
+    background-color: var(--color-neutro);
+}
+
+.programacion img {
+    width: 100%;
+}
+
+
+/*FONDO PARA LOS TITULOS DEL GRID y fotos del fondo DEL BLOG*/
+
+.fondo {
+    background-color: #40363e6c;
+    backdrop-filter: blur(8px) grayscale(50%);
+    padding: 0.5em;
+}
+
+#articlefoto1 {
+    background-image: url("../img/blog/micro_.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#articlefoto2 {
+    background-image: url("../img/blog/violin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#articlefoto3 {
+    background-image: url("../img/blog/guitarra.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#articlefoto4 {
+    background-image: url("../img/blog/coro.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#articlefoto5 {
+    background-image: url("../img/blog/concierto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#articlefoto6 {
+    background-image: url("../img/blog/piano2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*APARTADO RESERVAS CON DIVS IRREGULARES DE COLORES CON SKEW*/
+
+div#cartelreserva1 {
+    background-color: var(--color-primario);
+    color: var(--color-neutro);
+    width: 68.5vw;
+    padding: 0.36em;
+    transform: skew(347deg);
+    font-weight: bold;
+}
+
+div#cartelreserva2 {
+    transform: skew(347deg);
+    background-color: var(--color-secundario);
+    color: var(--color-neutro);
+    width: 68.5vw;
+    padding: 0.36em;
+    font-weight: bold;
+}
+
+
+/*NOTAS MUSICALES CON GRID del APARTADO DE CLASES*/
+
+.notas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
+}
+
+
+/*alinear que estén a la misma altura las imágenes de las notas de CLASES y de HOME*/
+
+.notas img,
+.ordendetres img {
+    vertical-align: baseline;
+}
+
+figure {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    /*cambio en el footer para que se vea ordenado y pase de estar centrado a columna junto a los textos legales*/
+    .suscribirsegrande {
+        display: block;
+    }
+    .suscribirse {
+        display: none;
+    }
+    .no-slider img {
+        width: 73vw;
+    }
+    .privacidad {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 1em;
+    }
+    .privacidad a {
+        padding: 0.8em;
+    }
+    .contactoyhome {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .videogal {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contactoyhome iframe,
+    .contactoyhome img {
+        width: 100%;
+        height: 70%;
+        margin-top: 3.5em;
+    }
+    .blog {
+        padding: 30px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .clases {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 80vw;
+    }
+    .notas {
+        grid-template-columns: repeat(3, 0.5fr);
+    }
+    .item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .item3 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    .item6 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    .tarifasarte {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .programacion {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    footer {
+        font-size: 0.8em;
+        padding: 2.4em;
+    }
+    div#cartelreserva1 {
+        width: 27vw;
+    }
+    div#cartelreserva2 {
+        width: 27vw;
+    }
+    .posters {
+        display: block;
+        width: 20.86vw;
+    }
+    .videoletras {
+        bottom: 0;
+        width: 76vw;
+        color: #fff;
+        background: var(--color-opcional);
+        display: flex;
+        justify-content: center;
+    }
+    video {
+        width: 76vw;
+    }
+    .videogal {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+    }
+    .videogal figure {
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    footer {
+        font-size: 0.9em;
+    }
+    .sobremi {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tarifasarte {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .nav-bar {
+        display: none;
+    }
+    .menu .navbar-logo {
+        display: block;
+    }
+    .menu {
+        background: var(--color-primario);
+        margin-left: 0;
+        width: 100vw;
+        height: 14vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .menu-item i {
+        display: none;
+    }
+    /*mostrar testimonios en carrusel*/
+    .slider {
+        display: block;
+        width: 65vw;
+    }
+    /*ocultar testimonios con forma redonda*/
+    .no-slider {
+        display: none;
+    }
+    .navbar-logo {
+        width: 16vw;
+    }
+    .blog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .notas {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .posters {
+        width: 20.4vw;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .posters {
+        width: 20vw;
+    }
+}
